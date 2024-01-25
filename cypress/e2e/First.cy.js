@@ -23,6 +23,15 @@ describe('Validate login & Check/Uncheck Checkboxes', function(){
         cy.get('input[type="checkbox"]').check({force: true})
         // Uncheck all Checkboxes
         cy.get('input[type="checkbox"]').uncheck({force: true})
+        
+  })
+
+  afterEach(function() {
+      // Click on the user dropdown
+      cy.get('.oxd-userdropdown-tab').click()
+      // Choose the Logout option
+      cy.get('.oxd-dropdown-menu').contains('Logout').click()
+
   })
 
 })
